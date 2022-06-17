@@ -24,6 +24,8 @@
 
 
 
+#wrap{width: 100%; height: auto;}
+
 /* header */
 header{width: 100%; height: 100px;}
 
@@ -82,7 +84,6 @@ header{width: 100%; height: 100px;}
                     position: absolute; z-index: -1;
                     top: 8px; left: 0; 
                     transform: scaleY(1);
-                    transform-origin: -50%, -50%;
                     transition: all 0.8s ease;}
 .button .vertical{width: 129px; height: 60px;
                   background: none;
@@ -90,7 +91,6 @@ header{width: 100%; height: 100px;}
                   position: absolute; z-index: -2;
                   top: 0; left: 8px; 
                   transform: scaleX(1);
-                  transform-origin: -50%, -50%;
                   transition: all 0.8s ease;}
 
 .button:hover a{background-color: #343434; color: #fff;
@@ -140,38 +140,61 @@ header{width: 100%; height: 100px;}
 .container{width: 400px; height: 400px;
            position: relative;}
 
-.plus{width: 50%; height: 50%;
-      text-align: center; position: relative;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);}
-
-.plus span{width: 0px; height: 3px;
-           border-bottom: 2px solid #fff;
-           background: none;
-           position: absolute;
-           transform: translate(-50%, -50%);}
-.plus span:first-of-type{top: 50%; left: 50%;}
-.plus span:last-of-type{top: 51%; left: 51.5%;
-                        transform: translate(-50%, -50%) rotate(90deg);}
-
-.border1{width: 70%; height: 90%;
-         border: 2px solid #fff; background: none;
-         position: absolute; top: 20px; left: 52.5px;
-         transform: scale(0); transition: all 0.5s ease;}
-
-.border2{width: 85%; height: 75%;
-         border: 2px solid #fff; background: none;
-         position: absolute; top: 50px; left: 25px;
-         transform: scale(0); transition: all 0.5s ease;}
-
 .overlay{width: 90%; height: 90%;
          position: absolute; top: 20px; left: 20px;
          background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);
          transform: scale(0); transition: all 0.5s ease;}
 
-.container:hover .border1,
-.container:hover .border2,  
-.container:hover .overlay{transform: scale(1); transition: all 0.3s ease;}
+.overlay > img:first-of-type{width: 30px; height: 30px; 
+                             background: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.5);
+                             border-radius: 60px;
+                             position: absolute;
+                             top: 50%; left: 50%; z-index: 10;
+                             transform: translate(-50%, -50%);
+                             transition: all 0.5s ease;}
 
-.overlay:hover .plus span{width: 40px; height: 5px;
-                          transition: all 0.4s ease;}
+.container:hover .zoom{animation: .3s alternate ease infinite bounceUp;}
+
+.overlay > img:last-of-type{width: 100%; height: 100%;
+                            position: absolute; top: 0; left: 0;
+                            z-index: 2; transform: scale(0);
+                            transition: all 0.5s ease;}
+
+.container:hover .overlay,
+.container:hover .overlay > img:last-of-type{transform: scale(1); transition: all 0.3s ease;}
+
+@keyframes bounceUp{
+    from{transform: translate(-50%, -50%);}
+    to{transform: translate(-50%, -65%);}
+}
+
+
+/* popup */
+#popup{width: 100%; height: 100%;
+       position: fixed; top: 0; left: 0;
+       background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.8);
+       display: none;}
+
+.close{background: rgba(255, 255, 255, 0.5);
+       position: absolute; top: 3%; right: 3%;}
+
+#slide_img{width: 900px; height: 650px; 
+           border: 1px solid green;
+           position: relative;
+           margin: 2% auto;}
+
+#slide_img > img{position: absolute;
+                 top: 50%; left: 50%;
+                 transform: translate(-50%, -50%);}
+
+
+#rows_img{width: 1350px; height: 150px;
+          margin: 0 auto;
+          display: flex;}
+
+.rows{width: 150px; height: 150px;
+      position: relative;}
+
+.noClick{width: 100%; height: 100%;
+         position: absolute; background: rgba(0, 0, 0, 0.5);}
+
