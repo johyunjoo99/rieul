@@ -41,4 +41,16 @@ $(function(){
     }
 
     setInterval(sponsor, 5000);
+
+
+    // 스폰서 hover effect
+    $(".nocolor").mouseover(function(){
+        $(this).hide();
+        $(this).prev(".color").show();
+    });
+
+    $(".color").mouseout(function(){
+        $(this).hide();
+        $(this).next(".nocolor").show();
+    });
 });
