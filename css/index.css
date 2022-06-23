@@ -29,7 +29,8 @@
 
 
 /* header */
-header{width: 100%; height: 100px;}
+header{width: 100%; height: 100px;
+       background: url("../img/index_img/paper_texture.JPG") repeat;}
 
 #header_box{width: 1200px; height: 100px; margin: 0 auto;
             display: flex; justify-content: space-between;
@@ -40,12 +41,27 @@ header{width: 100%; height: 100px;}
 #big_nav{width: 50%; height: 100px;}
 #big_nav ul{width: 100%; height: 100px; margin: 0 auto;
             display: flex; justify-content: space-around; align-items: center;}
-#big_nav ul li a{font-family: "ONE-Mobile-Title"; font-size: 18px;}
+
+#big_nav ul li{padding: 6px 0;}
+
+#big_nav ul li a{font-family: "ONE-Mobile-Title"; font-size: 18px;
+                 position: relative; transition: 0.5s;}
+
+#big_nav ul li a::after{position: absolute; top: 100%; left: 0;
+                        content: ""; background-color: #343434;
+                        width: 100%; height: 2px;
+                        transition: transform 0.5s;
+                        transform: scaleX(0);
+                        transform-origin: right;}
+
+#big_nav li a:hover::after{transform: scaleX(1);
+                           transform-origin: left;}
 
 #menuIcon{width: 30px; height: 30px;
           display: flex; flex-direction: column;
           justify-content: center; align-items: center;
-          background-color: #343434;}
+          background-color: #343434;
+          display: none;}
 #menuIcon span{width: 20px; height: 6px;
                border-bottom: 2px solid #fff;}
 #menuIcon span:last-of-type{margin-bottom: 3.5px;}
@@ -55,7 +71,8 @@ header{width: 100%; height: 100px;}
 
 
 /* slider */
-#slider{width: 100%; height: 560px;}
+#slider{width: 100%; height: 560px;
+        background: url("../img/index_img/paper_texture.JPG") repeat;}
 
 #slider_box{width: 1200px; height: 560px; margin: 0 auto;
             display: flex; justify-content: space-around;
@@ -82,7 +99,7 @@ header{width: 100%; height: 100px;}
 .button a{width: 129px; height: 44px;
           font-family: "ONE-Mobile-Title"; font-size: 18px;
           border: 2px solid #343434;
-          background: #fff8ee; padding: 10px 15px;
+          background: #f6f3e5; padding: 10px 15px;
           position: absolute; top: 50%; left: 50%;  z-index: 2;
           transform: translate(-50%, -50%);}
 
@@ -142,7 +159,8 @@ header{width: 100%; height: 100px;}
 
 
 /* gallery */
-#gallery{width: 100%; height: 1250px;}
+#gallery{width: 100%; height: 1250px;
+         background: url("../img/index_img/paper_texture.JPG") repeat;}
 #gallery_box{width: 1200px; height: 1250px; margin: 0 auto;
              padding-top: 50px;}
 
@@ -150,7 +168,7 @@ header{width: 100%; height: 100px;}
              display: flex; flex-wrap: wrap;}
 
 .container{width: 400px; height: 400px;
-           position: relative;}
+           position: relative; z-index: 1;}
 
 .overlay{width: 90%; height: 90%;
          position: absolute; top: 20px; left: 20px;
@@ -186,6 +204,7 @@ header{width: 100%; height: 100px;}
 /* popup */
 #popup{width: 100%; height: 100%;
        position: fixed; top: 0; left: 0;
+       z-index: 30;
        background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.8);
        display: none;}
 
@@ -218,13 +237,14 @@ header{width: 100%; height: 100px;}
 
 
 /* slogan */
-#slogan{width: 100%; height: 200px;
-        margin: 5% 0;}
+#slogan{width: 100%; height: 350px;
+        padding: 5% 0;
+        background: url("../img/index_img/paper_texture.JPG") repeat;}
 #slogan_box{width: 1200px; height: 200px; 
             margin: 0 auto;}
 
 #slogan_img{width: 300px; height: 100px;
-            margin: 3% auto;}
+            margin: 0 auto;}
 #slogan_img{width: 300px; height: 100px;}
 
 #slogan_box p{font-family: 'ONE-Mobile-Regular';
@@ -235,7 +255,8 @@ header{width: 100%; height: 100px;}
 
 
 /* contact */
-#contact{width: 100%; height: 500px}
+#contact{width: 100%; height: 500px;
+         background: url("../img/index_img/paper_texture.JPG") repeat;}
 #contact_box{width: 1200px; height: 500px;
              margin: 0 auto; position: relative;}
 
@@ -254,11 +275,15 @@ header{width: 100%; height: 100px;}
 #contact_info p{font-family: 'ONE-Mobile-Regular'; font-size: 18px;
                 text-align: center; line-height: 30px;}
 
+#contact_info .button a{background-color: #fff8ee;}
+#contact_info .button:hover a{background-color: #343434;}
+
 
 
 
 /* campaign */
-#campaign{width: 100%; height: 500px;}
+#campaign{width: 100%; height: 500px;
+          background: url("../img/index_img/paper_texture.JPG") repeat;}
 #campaign_box{width: 1200px; height: 500px;
               margin: 0 auto; position: relative;}
 
@@ -275,6 +300,10 @@ header{width: 100%; height: 100px;}
 #campaign_info p{font-family: 'ONE-Mobile-Regular'; font-size: 18px;
                 text-align: center; line-height: 30px;}
 
+#campaign_info .button a{background-color: #fff8ee;}
+
+#campaign_info .button:hover a{background-color: #343434;}
+
 #campaign_box img{position:absolute; top: 50%; right: 0;
                   transform: translateY(-50%);}
 
@@ -282,8 +311,12 @@ header{width: 100%; height: 100px;}
 
 
 /* sponsor */
-#sponsor{width: 100%; height: 310px;}
-#sponsor_box{width: 1200px; height: 310px; margin: 0 auto;}
+#sponsor{width: 100%; height: 400px;
+         margin-bottom: 420px; 
+         position: relative; z-index: 10;
+         background: url("../img/index_img/paper_texture.JPG") repeat;}
+#sponsor_box{width: 1200px; height: 310px; 
+             margin: 0 auto;}
 
 #slideWrap{width: 100%; height: 90%; margin: 0 auto;
            overflow: hidden;}
@@ -295,3 +328,43 @@ header{width: 100%; height: 100px;}
 .slideImg img{position: absolute;}
 
 .color{display: none;}
+
+
+
+
+/* footer */
+footer{width: 100%; height: 420px;
+       background-color: #111; 
+       position: fixed; bottom: 0;
+       z-index: -10;}
+#footer_box{width: 1200px; height: 420px; 
+            margin: 0 auto; display: flex;
+            flex-direction: column; justify-content: center;
+            align-items: center;}
+
+#footer_box p{font-family: 'ONE-Mobile-Regular'; color: #fff;
+              text-align: center; line-height: 30px; 
+              margin: 1% 0;}
+
+#icons{width: 100%; height: 50px;
+       display: flex; justify-content: center;
+       align-items: center;}
+#icons img{margin: 0 1%; border-radius: 30px;
+           transition: all 0.3s ease;}
+
+.call{background-color: #fed334;}
+.email{background-color: #654fa0;}
+.insta{background-color: #ed1f3e;}
+.face{background-color: #3f68b1;}
+
+.call:hover{background-color: #ed1f3e;}
+.email:hover{background-color: #3f68b1;}
+.insta:hover{background-color: #214095;}
+.face:hover{background-color: #343434;}
+
+#flower1{width: 450px; position: absolute;
+         top: 20%; left: -1%;}
+#flower2{width: 450px;
+         position: absolute;
+         top: -5%; right: -1%;
+         transform: rotate(10deg);}
