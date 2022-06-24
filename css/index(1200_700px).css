@@ -22,58 +22,59 @@
 }
 /* 행복고흥B */
 
-@media(min-width: 1201px){
+@media(max-width: 1199px) and (min-width: 700px){
 
 #wrap{width: 100%; height: auto;}
 
 
 
 /* slider */
-#slider{width: 100%; height: 560px;
-        background: url("../img/index_img/paper_texture.JPG") repeat;}
+#slider{width: 100%; height: auto;
+        background: url("../img/index_img/paper_texture.JPG") repeat;
+        padding-bottom: 3vw;}
 
-#slider_box{width: 1200px; height: 560px; margin: 0 auto;
+#slider_box{width: 100%; height: auto; margin: 0 auto;
             display: flex; justify-content: space-around;
             align-items: center; position: relative;
             z-index: 10;}
-#slider_text{width: 500px; height: 380px;
+#slider_text{width: 50%; height: auto;
              display: flex; flex-direction: column;
              justify-content: space-between; align-items: center;}
 
-#slider_text h2{font-family: '행복고흥L'; font-size: 60px;
-                line-height: 70px; text-align: center;}
+#slider_text h2{font-family: '행복고흥L'; font-size: 5vw;
+                line-height: 5.8vw; text-align: center;}
 #slider_text h2:last-of-type{margin-top: 5%;}
-#slider_text span{font-size: 100px;}
+#slider_text span{font-size: 8vw;}
 
 
 
 
 
 /* button design */
-.button{width: 145px; height: 60px;
+.button{width: 13.5vw; height: 5.5vw;
         text-align: center; background: none;
         border: none; padding: 10px 15px; 
         position: relative;}
 
-.button a{width: 129px; height: 44px;
-          font-family: "ONE-Mobile-Title"; font-size: 18px;
+.button a{width: 12vw; height: 4vw;
+          font-family: "ONE-Mobile-Title"; font-size: 1.5vw;
           border: 2px solid #343434;
           background: #f6f3e5; padding: 10px 15px;
           position: absolute; top: 50%; left: 50%;  z-index: 2;
           transform: translate(-50%, -50%);}
 
-.button .horizontal{width: 100%; height: 44px;
+.button .horizontal{width: 100%; height: 4vw;
                     border: 2px solid #343434;
                     background: none;
                     position: absolute;
-                    top: 8px; left: 0; 
+                    top: 0.75vw; left: 0; 
                     transform: scaleY(1);
                     transition: all 0.8s ease;}
-.button .vertical{width: 129px; height: 60px;
+.button .vertical{width: 12vw; height: 5.5vw;
                   background: none;
                   border: 2px solid #343434;
                   position: absolute;
-                  top: 0; left: 8px; 
+                  top: 0; left: 0.75vw; 
                   transform: scaleX(1);
                   transition: all 0.8s ease;}
 
@@ -87,12 +88,12 @@
                         transform: all 0.8s ease;}
 
 
-#slider_img{width: 320px; height: 400px;}
-#slider_img img{width: auto; height: 308px;
-                display: block; margin: 20px auto 20px;
+#slider_img{width: 50%; height: auto;}
+#slider_img img{width: auto; height: 25vw;
+                display: block; margin: 1.6vw auto 1.6vw;
                 animation: 3s infinite alternate floating;}
-.shadow{height: 3px; display: block;
-        margin: 15px auto;
+.shadow{height: 0.25vw; display: block;
+        margin: 1.25px auto;
         animation: 3s infinite alternate shadow;}
 
 
@@ -106,11 +107,11 @@
 }
 
 @keyframes shadow{
-    0%{width: 220px; 
+    0%{width: 18vw; 
        box-shadow: 0px 15px 8px rgba(0, 0, 0, 0.8);}
-    50%{width: 200px;
+    50%{width: 16vw;
         box-shadow: 0px 15px 8px rgba(0, 0, 0, 0.5);}
-    100%{width: 220px;
+    100%{width: 18vw;
          box-shadow: 0px 15px 8px rgba(0, 0, 0, 0.8);}
 } 
 
@@ -118,25 +119,28 @@
 
 
 /* gallery */
-#gallery{width: 100%; height: 1250px;
+#gallery{width: 100%; height: auto;
          background: url("../img/index_img/paper_texture.JPG") repeat;}
-#gallery_box{width: 1200px; height: 1250px; margin: 0 auto;
-             padding-top: 50px;}
+#gallery_box{width: 95%; height: auto; margin: 0 auto;
+             padding-top: 4.1vw;}
 
-#gallery_img{width: 1200px; height: 1200px;
+#gallery_img{width: 100; height: 95%;
+             margin: 0 auto; 
              display: flex; flex-wrap: wrap;}
 
-.container{width: 400px; height: 400px;
+.container{width: 31vw; height: 31vw;
            position: relative; z-index: 1;}
 
+.container > img{width: 100%;}
+
 .overlay{width: 90%; height: 90%;
-         position: absolute; top: 20px; left: 20px;
+         position: absolute; top: 1.6vw; left: 1.6vw;
          background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);
          transform: scale(0); transition: all 0.5s ease;}
 
-.overlay > img:first-of-type{width: 30px; height: 30px; 
+.overlay > img:first-of-type{width: 3vw; height: 3vw; 
                              background: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.5);
-                             border-radius: 60px;
+                             border-radius: 5vw;
                              position: absolute;
                              top: 50%; left: 50%; z-index: 10;
                              transform: translate(-50%, -50%);
@@ -170,21 +174,25 @@
 .close{background: rgba(255, 255, 255, 0.5);
        position: absolute; top: 3%; right: 3%;}
 
-#slide_img{width: 900px; height: 650px;
+#slide_img{width: 45vw; height: 50vw;
            position: relative;
-           margin: 2% auto;}
+           margin: 10% auto;}
 
-#slide_img > img{position: absolute;
+#slide_img > img{width: 100%;
+                 position: absolute;
                  top: 50%; left: 50%;
-                 transform: translate(-50%, -50%);}
+                 transform: translate(-50%, -35%);}
 
 
-#rows_img{width: 1350px; height: 150px;
-          margin: 0 auto;
-          display: flex;}
 
-.rows{width: 150px; height: 150px;
+#rows_img{width: 112vw; height: 10vw;
+          display: flex;
+          margin: 5%;}
+
+.rows{width: 10vw; height: 10vw;
       position: relative;}
+
+.rows > img{width: 10vw;}
 
 .noClick{width: 100%; height: 100%;
          position: absolute; background: rgba(0, 0, 0, 0.5);}
@@ -195,36 +203,37 @@
 
 
 /* slogan */
-#slogan{width: 100%; height: 350px;
+#slogan{width: 100%; height: auto;
         padding: 5% 0;
         background: url("../img/index_img/paper_texture.JPG") repeat;}
-#slogan_box{width: 1200px; height: 200px; 
+#slogan_box{width: 100%; height: auto; 
             margin: 0 auto;}
 
-#slogan_img{width: 300px; height: 100px;
-            margin: 0 auto;}
+#slogan_img{width: 25vw; height: 8.3vw;
+            margin: 3% auto;}
 
 #slogan_box p{font-family: 'ONE-Mobile-Regular';
-              font-size: 18px; margin: 1% 0;
+              font-size: 1.8vw; margin: 1% 0;
               text-align: center;}
 
 
 
 
 /* contact */
-#contact{width: 100%; height: 500px;
+#contact{width: 100%; height: 41vw;
          background: url("../img/index_img/paper_texture.JPG") repeat;}
-#contact_box{width: 1200px; height: 500px;
+#contact_box{width: 95%; height: 41vw;
              margin: 0 auto; position: relative;
              z-index: 10;}
 
-#contact_box img{position: absolute; top: 50%; left: 0;
+#contact_box img{width: 70%;
+                 position: absolute; top: 50%; left: 0;
                  transform: translateY(-50%);}
 
-#contact_info{width: 0px; height: 300px;
-              border: 15px solid #fff8ee;
+#contact_info{width: 0px; height: 30vw;
+              border: 1.25vw solid #fff8ee;
               background-color: #f6f3e2;
-              box-shadow: inset 0px 0px 15px #b09f8c;
+              box-shadow: inset 0px 0px 1.25vw #b09f8c;
               position: absolute; top: 50%; left: 50%;
               transform: translateY(-50%); 
               transition: all 0.5s ease; overflow-x: hidden;
@@ -233,11 +242,11 @@
 
 #contact_info h2{width: 100%;
                  font-family: 'ONE-Mobile-Title'; 
-                 font-size: 40px; text-align: center;}
-#contact_info p{width: 100%; height: 60px; 
+                 font-size: 3.3vw; text-align: center;}
+#contact_info p{width: 100%; height: 6vw; 
                 font-family: 'ONE-Mobile-Regular'; 
-                font-size: 18px; text-align: center; 
-                line-height: 30px; margin: 3% 0;}
+                font-size: 1.6vw; text-align: center; 
+                line-height: 3vw; margin: 3% 0;}
 
 #contact_info .button a{background-color: #f6f3e2;}
 #contact_info .button:hover a{background-color: #343434;}
@@ -246,15 +255,15 @@
 
 
 /* campaign */
-#campaign{width: 100%; height: 500px;
+#campaign{width: 100%; height: 41vw;
           background: url("../img/index_img/paper_texture.JPG") repeat;}
-#campaign_box{width: 1200px; height: 500px;
+#campaign_box{width: 95%; height: 41vw;
               margin: 0 auto; position: relative;}
 
-#campaign_info{width: 0px; height: 350px;
-               border: 15px solid #fff8ee;
+#campaign_info{width: 0px; height: 32vw;
+               border: 1.25vw solid #fff8ee;
                background-color: #f6f3e2;
-               box-shadow: inset 0px 0px 15px #b09f8c;
+               box-shadow: inset 0px 0px 1.25vw #b09f8c;
                position: absolute; top: 50%; left: 0;
                z-index: 1; transform: translateY(-50%);
                transition: all 0.5s ease; overflow: hidden;
@@ -263,40 +272,42 @@
 
 #campaign_info h2{width: 100%;
                   font-family: 'ONE-Mobile-Title'; 
-                  font-size: 40px; text-align: center;}
+                  font-size: 3.3vw; text-align: center;}
 
-#campaign_info p{width: 100%; height: 60px;
+#campaign_info p{width: 100%; height: 6vw;
                  font-family: 'ONE-Mobile-Regular'; 
-                 font-size: 18px; text-align: center; 
-                 line-height: 30px;
+                 font-size: 1.4vw; text-align: center; 
+                 line-height: 3vw;
                  margin: 3% 0;}
 
 #campaign_info .button a{background-color: #f6f3e2;}
 
 #campaign_info .button:hover a{background-color: #343434;}
 
-#campaign_box img{position:absolute; top: 50%; right: 0;
+#campaign_box img{width: 60%;
+                  position:absolute; top: 50%; right: 0;
                   transform: translateY(-50%);}
 
 
 
 
 /* sponsor */
-#sponsor{width: 100%; height: 400px;
+#sponsor{width: 100%; height: 33vw;
          margin-bottom: 420px; 
          background: url("../img/index_img/paper_texture.JPG") repeat;}
-#sponsor_box{width: 1200px; height: 310px; 
+#sponsor_box{width: 90%; height: auto; 
              margin: 0 auto; position: relative;
              z-index: 10;}
 
-#slideWrap{width: 100%; height: 90%; margin: 0 auto;
-           overflow: hidden;}
-#slide{width: 1440px; height: 200px;
-       margin-top: 8%;}
+#slideWrap{width: 100%; height: 90%; 
+           margin: 0 auto; overflow: hidden;}
+#slide{width: 135.5vw; height: 14.5vw;
+       padding-top: 8%;}
 
-.slideImg{width: 240px; height: 155px;
+.slideImg{width: 22.5vw; height: 14.5vw;
           position: relative; float: left;}
-.slideImg img{position: absolute;}
+.slideImg img{width: 100%;
+              position: absolute;}
 
 .color{display: none;}
 
@@ -305,8 +316,8 @@
 
 
 /* flower decoration */
-#flower1{width: 23vw; position: absolute;
-         top: 300px; left: -1%;
+#flower1{width: 25vw; position: absolute;
+         top: 20vw; left: -1%;
          opacity: 0.8;
          transform: rotate(-1deg);}
 #flower2{width: 25vw; position: absolute;

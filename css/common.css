@@ -3,3 +3,80 @@
 body{background-color: #fff8ee;}
 ul, ol, li{list-style: none;}
 a{text-decoration: none;}
+
+
+@media(min-width: 1201px){
+
+/* header */
+header{width: 100%; height: 100px;
+  background: url("../img/index_img/paper_texture.JPG") repeat;
+  position: relative; z-index: 20;}
+
+#header_box{width: 1200px; height: 100px; margin: 0 auto;
+       display: flex; justify-content: space-between;
+       align-items: center;}
+#small_nav{width: 50px; height: 50px;}
+#small_nav a, #small_nav a img{width: 50px; height: 50px;}
+
+#big_nav{width: 50%; height: 100px;}
+#big_nav ul{width: 100%; height: 100px; margin: 0 auto;
+       display: flex; justify-content: space-around; align-items: center;}
+
+#big_nav ul li{padding: 6px 0;}
+
+#big_nav ul li a{font-family: "ONE-Mobile-Title"; font-size: 18px;
+            position: relative; transition: 0.5s;}
+
+#big_nav ul li a::after{position: absolute; top: 100%; left: 0;
+                   content: ""; background-color: #343434;
+                   width: 100%; height: 2px;
+                   transition: transform 0.5s;
+                   transform: scaleX(0);
+                   transform-origin: right;}
+
+#big_nav li a:hover::after{transform: scaleX(1);
+                      transform-origin: left;}
+
+#menuIcon{width: 30px; height: 30px;
+     display: flex; flex-direction: column;
+     justify-content: center; align-items: center;
+     background-color: #343434;
+     display: none;}
+#menuIcon span{width: 20px; height: 6px;
+          border-bottom: 2px solid #fff;}
+#menuIcon span:last-of-type{margin-bottom: 3.5px;}
+
+
+
+
+
+/* footer */
+footer{width: 100%; height: 420px;
+  background-color: #111; 
+  position: fixed; bottom: 0;
+  z-index: -10;}
+#footer_box{width: 1200px; height: 420px; 
+       margin: 0 auto; display: flex;
+       flex-direction: column; justify-content: center;
+       align-items: center;}
+
+#footer_box p{font-family: 'ONE-Mobile-Regular'; color: #fff;
+         text-align: center; line-height: 30px; 
+         margin: 1% 0;}
+
+#icons{width: 100%; height: 50px;
+  display: flex; justify-content: center;
+  align-items: center;}
+#icons img{margin: 0 1%; border-radius: 30px;
+      transition: all 0.3s ease;}
+
+.call{background-color: #fed334;}
+.email{background-color: #654fa0;}
+.insta{background-color: #ed1f3e;}
+.face{background-color: #3f68b1;}
+
+.call:hover{background-color: #ed1f3e;}
+.email:hover{background-color: #3f68b1;}
+.insta:hover{background-color: #214095;}
+.face:hover{background-color: #343434;}
+}

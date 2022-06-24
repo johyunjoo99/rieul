@@ -36,7 +36,7 @@ $(function(){
     function sponsor(){
         $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
             $(".slideImg:first").appendTo("#slide");
-            $("#slide").css({marginLeft: 0});
+            $("#slide").stop().css({marginLeft: 0});
         });
     }
 
@@ -52,5 +52,25 @@ $(function(){
     $(".color").mouseout(function(){
         $(this).hide();
         $(this).next(".nocolor").show();
+    });
+
+
+
+    // scroll effect
+
+    $(window).scroll(function(){
+
+        var ws = $(this).scrollTop();
+
+        var contact = $("#contact_info").offset().top;
+        if(ws > contact - 500){
+            $("#contact_info").css("width", "50%")
+        }
+
+        var campaign = $("#campaign_info").offset().top;
+        if(ws > campaign - 500){
+            $("#campaign_info").css("width", "55%");
+            $("#campaign_info h2, #campaign_info p");
+        }
     });
 });
