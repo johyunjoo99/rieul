@@ -136,7 +136,7 @@
 .container > img{height: 100%;}
 
 .overlay{width: 90%; height: 90%;
-         position: absolute; top: 4.5vw; left: 4vw;
+         position: absolute; top: 4vw; left: 4vw;
          background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);
          transform: scale(0); transition: all 0.5s ease;}
 

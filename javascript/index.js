@@ -39,57 +39,61 @@ $(function(){
     // 스폰서 슬라이드
 
     function slideResize(){
-        if(window.matchMedia(" (min-width: 0px) and (max-width: 599px)").matches){
-
-            var fullWidth = $("#slide").width();
-            var slideWidth = fullWidth / 6
+        if(window.matchMedia("(min-width: 0px) and (max-width: 599px)").matches){
         
             function sponsor(){
+
+                var fullWidth = $("#slide").width();
+                var slideWidth = fullWidth / 6
+
                 $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
                     $(".slideImg:first").appendTo("#slide");
-                    $("#slide").css({marginLeft: 0});
+                    $("#slide").stop().css({marginLeft: 0});
                 });
             }
         
             setInterval(sponsor, 5000);
 
         } else if(window.matchMedia("(min-width: 600px) and (max-width: 799px)").matches){
-
-            var fullWidth = $("#slide").width();
-            var slideWidth = fullWidth / 6
         
             function sponsor(){
+
+                var fullWidth = $("#slide").width();
+                var slideWidth = fullWidth / 6
+
                 $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
                     $(".slideImg:first").appendTo("#slide");
-                    $("#slide").css({marginLeft: 0});
+                    $("#slide").stop().css({marginLeft: 0});
                 });
             }
         
             setInterval(sponsor, 5000);
 
         } else if(window.matchMedia("(min-width: 800px) and (max-width: 1199px)").matches){
-
-            var fullWidth = $("#slide").width();
-            var slideWidth = fullWidth / 6
         
             function sponsor(){
+
+                var fullWidth = $("#slide").width();
+                var slideWidth = fullWidth / 6
+
                 $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
                     $(".slideImg:first").appendTo("#slide");
-                    $("#slide").css({marginLeft: 0});
+                    $("#slide").stop().css({marginLeft: 0});
                 });
             }
         
             setInterval(sponsor, 5000);
 
         } else{
-
-            var fullWidth = $("#slide").width();
-            var slideWidth = fullWidth / 6
         
             function sponsor(){
+
+                var fullWidth = $("#slide").width();
+                var slideWidth = fullWidth / 6
+
                 $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
                     $(".slideImg:first").appendTo("#slide");
-                    $("#slide").css({marginLeft: 0});
+                    $("#slide").stop().css({marginLeft: 0});
                 });
             }
         
