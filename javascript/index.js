@@ -1,5 +1,12 @@
 $(function(){
 
+    //menu 슬라이딩
+    $("#menuIcon").click(function(){
+        $("#big_nav").slideToggle();
+        $("#menuIcon span:first").toggle("fast");
+        $("#menuIcon span:last").toggle("fast");
+    });
+
 
     // 팝업 block
     $(".container").click(function(){
@@ -30,17 +37,71 @@ $(function(){
 
 
     // 스폰서 슬라이드
-    var fullWidth = $("#slide").width();
-    var slideWidth = fullWidth / 6
 
-    function sponsor(){
-        $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
-            $(".slideImg:first").appendTo("#slide");
-            $("#slide").stop().css({marginLeft: 0});
-        });
+    function slideResize(){
+        if(window.matchMedia(" (min-width: 0px) and (max-width: 599px)").matches){
+
+            var fullWidth = $("#slide").width();
+            var slideWidth = fullWidth / 6
+        
+            function sponsor(){
+                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
+                    $(".slideImg:first").appendTo("#slide");
+                    $("#slide").css({marginLeft: 0});
+                });
+            }
+        
+            setInterval(sponsor, 5000);
+
+        } else if(window.matchMedia("(min-width: 600px) and (max-width: 799px)").matches){
+
+            var fullWidth = $("#slide").width();
+            var slideWidth = fullWidth / 6
+        
+            function sponsor(){
+                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
+                    $(".slideImg:first").appendTo("#slide");
+                    $("#slide").css({marginLeft: 0});
+                });
+            }
+        
+            setInterval(sponsor, 5000);
+
+        } else if(window.matchMedia("(min-width: 800px) and (max-width: 1199px)").matches){
+
+            var fullWidth = $("#slide").width();
+            var slideWidth = fullWidth / 6
+        
+            function sponsor(){
+                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
+                    $(".slideImg:first").appendTo("#slide");
+                    $("#slide").css({marginLeft: 0});
+                });
+            }
+        
+            setInterval(sponsor, 5000);
+
+        } else{
+
+            var fullWidth = $("#slide").width();
+            var slideWidth = fullWidth / 6
+        
+            function sponsor(){
+                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
+                    $(".slideImg:first").appendTo("#slide");
+                    $("#slide").css({marginLeft: 0});
+                });
+            }
+        
+            setInterval(sponsor, 5000);
+
+        }
     }
 
-    setInterval(sponsor, 5000);
+    window.addEventListener("resize", slideResize, false);
+
+    slideResize();
+
 
 
     // 스폰서 hover effect
@@ -58,19 +119,97 @@ $(function(){
 
     // scroll effect
 
-    $(window).scroll(function(){
+    function scorllResize(){
+        if(window.matchMedia("(min-width: 0px) and (max-width: 599px)").matches){
 
-        var ws = $(this).scrollTop();
+            $(window).scroll(function(){
 
-        var contact = $("#contact_info").offset().top;
-        if(ws > contact - 500){
-            $("#contact_info").css("width", "50%")
+                var ws = $(this).scrollTop();
+        
+                var contact = $("#contact_info").offset().top;
+                if(ws > contact - 500){
+                    $("#contact_info").css("width", "90%")
+                    $("#contact_info h2, #contact_info p, #contact .button").css("transition-delay", "0.3s");
+                    $("#contact_info h2, #contact_info p, #contact .button").css("opacity", 1);
+                }
+        
+                var campaign = $("#campaign_info").offset().top;
+                if(ws > campaign - 500){
+                    $("#campaign_info").css("width", "90%");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("transition-delay", "0.3s");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("opacity", 1);
+                }
+            });
+
+        } else if(window.matchMedia("(min-width: 600px) and (max-width: 799px)").matches){
+
+            $(window).scroll(function(){
+
+                var ws = $(this).scrollTop();
+        
+                var contact = $("#contact_info").offset().top;
+                if(ws > contact - 500){
+                    $("#contact_info").css("width", "85%")
+                    $("#contact_info h2, #contact_info p, #contact .button").css("transition-delay", "0.3s");
+                    $("#contact_info h2, #contact_info p, #contact .button").css("opacity", 1);
+                }
+        
+                var campaign = $("#campaign_info").offset().top;
+                if(ws > campaign - 500){
+                    $("#campaign_info").css("width", "85%");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("transition-delay", "0.3s");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("opacity", 1);
+                }
+            });
+
+        } else if(window.matchMedia("(min-width: 800px) and (max-width: 1199px)").matches){
+
+            $(window).scroll(function(){
+
+                var ws = $(this).scrollTop();
+        
+                var contact = $("#contact_info").offset().top;
+                if(ws > contact - 500){
+                    $("#contact_info").css("width", "50%")
+                    $("#contact_info h2, #contact_info p, #contact .button").css("transition-delay", "0.3s");
+                    $("#contact_info h2, #contact_info p, #contact .button").css("opacity", 1);
+                }
+        
+                var campaign = $("#campaign_info").offset().top;
+                if(ws > campaign - 500){
+                    $("#campaign_info").css("width", "55%");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("transition-delay", "0.3s");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("opacity", 1);
+                }
+            });
+
+        } else{
+
+            $(window).scroll(function(){
+
+                var ws = $(this).scrollTop();
+        
+                var contact = $("#contact_info").offset().top;
+                if(ws > contact - 500){
+                    $("#contact_info").css("width", "50%")
+                    $("#contact_info h2, #contact_info p, #contact .button").css("transition-delay", "0.3s");
+                    $("#contact_info h2, #contact_info p, #contact .button").css("opacity", 1);
+                }
+        
+                var campaign = $("#campaign_info").offset().top;
+                if(ws > campaign - 500){
+                    $("#campaign_info").css("width", "55%");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("transition-delay", "0.3s");
+                    $("#campaign_info h2, #campaign_info p, #campaign .button").css("opacity", 1);
+                }
+            });
         }
 
-        var campaign = $("#campaign_info").offset().top;
-        if(ws > campaign - 500){
-            $("#campaign_info").css("width", "55%");
-            $("#campaign_info h2, #campaign_info p");
-        }
-    });
+    }
+
+    window.addEventListener("resize", scorllResize, false);
+
+    scorllResize();
+
+
 });

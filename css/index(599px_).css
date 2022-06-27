@@ -22,58 +22,61 @@
 }
 /* 행복고흥B */
 
-@media(min-width: 1201px){
+@media(max-width: 599px){
 
 #wrap{width: 100%; height: auto;}
 
 
 
 /* slider */
-#slider{width: 100%; height: 560px;
-        background: url("../img/index_img/paper_texture.JPG") repeat;}
+#slider{width: 100%; height: 120vw;
+        background: url("../img/index_img/paper_texture.JPG") repeat;
+        padding: 13vw 0;}
 
-#slider_box{width: 1200px; height: 560px; margin: 0 auto;
-            display: flex; justify-content: space-around;
+#slider_box{width: 100%; height: 50%; margin: 0 auto;
+            display: flex; flex-direction: column;
+            justify-content: space-around;
             align-items: center; position: relative;
-            z-index: 10;}
-#slider_text{width: 500px; height: 380px;
+            z-index: 20; margin-top: 12vw;}
+#slider_text{width: 85%; height: auto;
              display: flex; flex-direction: column;
              justify-content: space-between; align-items: center;}
 
-#slider_text h2{font-family: '행복고흥L'; font-size: 60px;
-                line-height: 70px; text-align: center;}
-#slider_text h2:last-of-type{margin-top: 5%;}
-#slider_text span{font-size: 100px;}
+#slider_text h2{font-family: '행복고흥L'; font-size: 10vw;
+                line-height: 5.8vw; text-align: center;}
+#slider_text h2:last-of-type{margin: 5% 0;}
+#slider_text span{font-size: 13vw;}
 
 
 
 
 
 /* button design */
-.button{width: 145px; height: 60px;
+.button{width: 23vw; height: 9.5vw;
         text-align: center; background: none;
         border: none; padding: 10px 15px; 
-        position: relative;}
+        position: relative; cursor: pointer;}
 
-.button a{width: 129px; height: 44px;
-          font-family: "ONE-Mobile-Title"; font-size: 18px;
+.button a{width: 20.5vw; height: 7vw;
+          font-family: "ONE-Mobile-Title"; font-size: 2.5vw;
           border: 2px solid #343434;
           background: #f6f3e5; padding: 10px 15px;
           position: absolute; top: 50%; left: 50%;  z-index: 2;
-          transform: translate(-50%, -50%);}
+          transform: translate(-50%, -50%);
+          line-height: 2.5vw;}
 
-.button .horizontal{width: 100%; height: 44px;
+.button .horizontal{width: 100%; height: 7vw;
                     border: 2px solid #343434;
                     background: none;
                     position: absolute;
-                    top: 8px; left: 0; 
+                    top: 1.35vw; left: 0; 
                     transform: scaleY(1);
                     transition: all 0.8s ease;}
-.button .vertical{width: 129px; height: 60px;
+.button .vertical{width: 20.5vw; height: 100%;
                   background: none;
                   border: 2px solid #343434;
                   position: absolute;
-                  top: 0; left: 8px; 
+                  top: 0; left: 1.3vw; 
                   transform: scaleX(1);
                   transition: all 0.8s ease;}
 
@@ -87,12 +90,12 @@
                         transform: all 0.8s ease;}
 
 
-#slider_img{width: 320px; height: 400px;}
-#slider_img img{width: auto; height: 308px;
-                display: block; margin: 20px auto 20px;
+#slider_img{width: 100%; height: 50%;}
+#slider_img img{width: 40vw;
+                display: block; margin: 10vw auto 5vw;
                 animation: 3s infinite alternate floating;}
-.shadow{height: 3px; display: block;
-        margin: 15px auto;
+.shadow{height: 0.25vw; display: block;
+        margin: 1.5px auto;
         animation: 3s infinite alternate shadow;}
 
 
@@ -106,11 +109,11 @@
 }
 
 @keyframes shadow{
-    0%{width: 220px; 
+    0%{width: 30vw; 
        box-shadow: 0px 15px 8px rgba(0, 0, 0, 0.8);}
-    50%{width: 200px;
+    50%{width: 26vw;
         box-shadow: 0px 15px 8px rgba(0, 0, 0, 0.5);}
-    100%{width: 220px;
+    100%{width: 30vw;
          box-shadow: 0px 15px 8px rgba(0, 0, 0, 0.8);}
 } 
 
@@ -118,29 +121,33 @@
 
 
 /* gallery */
-#gallery{width: 100%; height: 1250px;
+#gallery{width: 100%; height: auto;
          background: url("../img/index_img/paper_texture.JPG") repeat;}
-#gallery_box{width: 1200px; height: 1250px; margin: 0 auto;
-             padding-top: 50px;}
+#gallery_box{width: 85%; height: auto; margin: 0 auto;
+             padding-top: 4.1vw;}
 
-#gallery_img{width: 1200px; height: 1200px;
+#gallery_img{width: 100%; height: 95%;
+             margin: 0 auto; 
              display: flex; flex-wrap: wrap;}
 
-.container{width: 400px; height: 400px;
+.container{width: 83vw; height: 83vw;
            position: relative; z-index: 1;}
 
+.container > img{height: 100%;}
+
 .overlay{width: 90%; height: 90%;
-         position: absolute; top: 20px; left: 20px;
+         position: absolute; top: 4.5vw; left: 4vw;
          background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);
          transform: scale(0); transition: all 0.5s ease;}
 
-.overlay > img:first-of-type{width: 30px; height: 30px; 
+.overlay > img:first-of-type{width: 6vw; height: 6vw; 
                              background: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.5);
-                             border-radius: 60px;
+                             border-radius: 5vw;
                              position: absolute;
                              top: 50%; left: 50%; z-index: 10;
                              transform: translate(-50%, -50%);
-                             transition: all 0.5s ease;}
+                             transition: all 0.5s ease;
+                             cursor: pointer;}
 
 .container:hover .zoom{animation: .3s alternate ease infinite bounceUp;}
 
@@ -167,24 +174,29 @@
        background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.8);
        display: none;}
 
-.close{background: rgba(255, 255, 255, 0.5);
+.close{width: 5vw;
+       background: rgba(255, 255, 255, 0.5);
        position: absolute; top: 3%; right: 3%;}
 
-#slide_img{width: 900px; height: 650px;
+#slide_img{width: 70vw; height: 105vw;
            position: relative;
-           margin: 2% auto;}
+           margin: 20% auto 15%;}
 
-#slide_img > img{position: absolute;
+#slide_img > img{width: 100%;
+                 position: absolute;
                  top: 50%; left: 50%;
                  transform: translate(-50%, -50%);}
 
 
-#rows_img{width: 1350px; height: 150px;
-          margin: 0 auto;
-          display: flex;}
 
-.rows{width: 150px; height: 150px;
+#rows_img{width: 112vw; height: 10vw;
+          display: flex;
+          margin: 0 5%;}
+
+.rows{width: 10vw; height: 10vw;
       position: relative;}
+
+.rows > img{width: 10vw;}
 
 .noClick{width: 100%; height: 100%;
          position: absolute; background: rgba(0, 0, 0, 0.5);}
@@ -195,50 +207,52 @@
 
 
 /* slogan */
-#slogan{width: 100%; height: 350px;
-        padding: 5% 0;
+#slogan{width: 100%; height: auto;
+        padding: 10% 0;
         background: url("../img/index_img/paper_texture.JPG") repeat;}
-#slogan_box{width: 1200px; height: 200px; 
+#slogan_box{width: 100%; height: auto; 
             margin: 0 auto;}
 
-#slogan_img{width: 300px; height: 100px;
-            margin: 0 auto;}
+#slogan_img{width: 100%; height: 15vw;
+            margin: 3% 0; position: relative;}
+#slogan_img img{width: 50vw;
+                position: absolute; top: 50%; left: 50%;
+                transform: translate(-50%, -50%);}
 
 #slogan_box p{font-family: 'ONE-Mobile-Regular';
-              font-size: 18px; margin: 1% 0;
+              font-size: 2.4vw; margin: 1% 0;
               text-align: center;}
 
 
 
 
 /* contact */
-#contact{width: 100%; height: 500px;
+#contact{width: 100%; height: 85vw;
          background: url("../img/index_img/paper_texture.JPG") repeat;}
-#contact_box{width: 1200px; height: 500px;
+#contact_box{width: 85%; height: 85vw;
              margin: 0 auto; position: relative;
              z-index: 10;}
 
-#contact_box img{position: absolute; top: 50%; left: 0;
-                 transform: translateY(-50%);}
+#contact_box img{width: 90%; position: absolute; 
+                 top: 5%; left: 0;}
 
-#contact_info{width: 0px; height: 300px;
-              border: 15px solid #fff8ee;
+#contact_info{width: 0px; height: 45vw;
+              border: 1.25vw solid #fff8ee;
               background-color: #f6f3e2;
-              box-shadow: inset 0px 0px 15px #b09f8c;
-              position: absolute; top: 50%; left: 50%;
-              transform: translateY(-50%); 
+              box-shadow: inset 0px 0px 1.25vw #b09f8c;
+              position: absolute; top: 40%; left: 15%; 
               transition: all 0.5s ease; overflow-x: hidden;
               display: flex; flex-direction: column;
               justify-content: center; align-items: center;}
 
 #contact_info h2{width: 100%;
                  font-family: 'ONE-Mobile-Title'; 
-                 font-size: 40px; text-align: center;
+                 font-size: 5vw; text-align: center;
                  opacity: 0; transition: all 0.3s ease;}
-#contact_info p{width: 100%; height: 60px; 
+#contact_info p{width: 100%; height: 6vw; 
                 font-family: 'ONE-Mobile-Regular'; 
-                font-size: 18px; text-align: center; 
-                line-height: 30px; margin: 3% 0;
+                font-size: 2.5vw; text-align: center; 
+                line-height: 3vw; margin: 3% 0;
                 opacity: 0; transition: all 0.3s ease;}
 
 #contact_info .button{opacity: 0; transition: all 0.3s ease;}
@@ -250,61 +264,62 @@
 
 
 /* campaign */
-#campaign{width: 100%; height: 500px;
+#campaign{width: 100%; height: 85vw;
           background: url("../img/index_img/paper_texture.JPG") repeat;}
-#campaign_box{width: 1200px; height: 500px;
+#campaign_box{width: 85%; height: 85vw;
               margin: 0 auto; position: relative;}
 
-#campaign_info{width: 0px; height: 350px;
-               border: 15px solid #fff8ee;
+#campaign_info{width: 0px; height: 45vw;
+               border: 1.25vw solid #fff8ee;
                background-color: #f6f3e2;
-               box-shadow: inset 0px 0px 15px #b09f8c;
-               position: absolute; top: 50%; left: 0;
-               z-index: 1; transform: translateY(-50%);
+               box-shadow: inset 0px 0px 1.25vw #b09f8c;
+               position: absolute; top: 40%; left: 0;
+               z-index: 1;
                transition: all 0.5s ease; overflow: hidden;
                display: flex; flex-direction: column;
                justify-content: center; align-items: center;}
 
 #campaign_info h2{width: 100%;
                   font-family: 'ONE-Mobile-Title'; 
-                  font-size: 40px; text-align: center;
+                  font-size: 4.5vw; text-align: center;
                   opacity: 0; transition: all 0.3s ease;}
 
-#campaign_info p{width: 100%; height: 80px;
+#campaign_info p{width: 100%; height: 8vw;
                  font-family: 'ONE-Mobile-Regular'; 
-                 font-size: 18px; text-align: center; 
-                 line-height: 30px;
-                 margin: 3% 0; opacity: 0;
+                 font-size: 2.5vw; text-align: center; 
+                 line-height: 3vw;
+                 margin: 3% 0; opacity: 0; 
                  transition: all 0.3s ease;}
-                
+            
 #campaign_info .button{opacity: 0; transition: all 0.3s ease;}
 
 #campaign_info .button a{background-color: #f6f3e2;}
 
 #campaign_info .button:hover a{background-color: #343434;}
 
-#campaign_box img{position:absolute; top: 50%; right: 0;
-                  transform: translateY(-50%);}
+#campaign_box img{width: 85%;
+                  position:absolute; top: 0; right: 0;}
 
 
 
 
 /* sponsor */
-#sponsor{width: 100%; height: 400px;
-         margin-bottom: 420px; 
+#sponsor{width: 100%; height: 50vw;
+         margin-bottom: 50vw; 
          background: url("../img/index_img/paper_texture.JPG") repeat;}
-#sponsor_box{width: 1200px; height: 310px; 
+#sponsor_box{width: 85%; height: auto; 
              margin: 0 auto; position: relative;
              z-index: 10;}
 
-#slideWrap{width: 100%; height: 90%; margin: 0 auto;
-           overflow: hidden;}
-#slide{width: 1440px; height: 200px;
-       margin-top: 8%;}
+#slideWrap{width: 100%; height: 90%; 
+           margin: 0 auto; overflow: hidden;}
+#slide{width: 234vw; height: 25vw;
+       padding-top: 8%;}
 
-.slideImg{width: 240px; height: 155px;
+.slideImg{width: 39vw; height: 25vw;
           position: relative; float: left;}
-.slideImg img{position: absolute;}
+.slideImg img{width: 100%;
+              position: absolute;}
 
 .color{display: none;}
 
@@ -313,26 +328,26 @@
 
 
 /* flower decoration */
-#flower1{width: 23vw; position: absolute;
-         top: 300px; left: -1%;
+#flower1{width: 40vw; position: absolute;
+         top: 105vw; left: 0%;
          opacity: 0.8;
          transform: rotate(-1deg);}
-#flower2{width: 25vw; position: absolute;
-         top: -60px; right: -1%;
+#flower2{width: 40vw; position: absolute;
+         top: -3vw; right: 0%;
          opacity: 0.8;
          transform: rotate(10deg);}
-#flower3{width: 450px; position: absolute;
-         top: 900px; right: 0;
+#flower3{width: 35vw; position: absolute;
+         top: 700vw; right: 0;
          opacity: 0.8;}
-#flower4{width: 450px; position: absolute;
-         top: 2000px; right: 0;
+#flower4{width: 30vw; position: absolute;
+         top: 920vw; right: 0;
          opacity: 0.8;}
-#flower5{width: 490px; position: absolute;
-         top: 1750px; left: -1%;
+#flower5{width: 35vw; position: absolute;
+         top: 875vw; left: -1%;
          transform: rotate(20deg);
          opacity: 0.8;}
-#flower6{width: 450px; position: absolute;
-         top: 2950px; left: 0;
+#flower6{width: 32vw; position: absolute;
+         top: 1075vw; left: 0;
          transform: rotate(15deg);
          opacity: 0.8;}
 
