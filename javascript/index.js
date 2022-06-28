@@ -2,7 +2,7 @@ $(function(){
 
     //menu 슬라이딩
     $("#menuIcon").click(function(){
-        $("#big_nav").slideToggle();
+        $("#big_nav").stop().slideToggle();
         $("#menuIcon span:first").toggle("fast");
         $("#menuIcon span:last").toggle("fast");
     });
@@ -33,90 +33,6 @@ $(function(){
         $("#slide_img img").attr("src", "img/index_img/popup" + ($(this).index()+1) + ".jpg")
         $(".noClick").removeClass("active");
         $(this).children(".noClick").addClass("active");
-    });
-
-
-    // 스폰서 슬라이드
-
-    function slideResize(){
-        if(window.matchMedia("(min-width: 0px) and (max-width: 599px)").matches){
-        
-            function sponsor(){
-
-                var fullWidth = $("#slide").width();
-                var slideWidth = fullWidth / 6
-
-                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
-                    $(".slideImg:first").appendTo("#slide");
-                    $("#slide").stop().css({marginLeft: 0});
-                });
-            }
-        
-            setInterval(sponsor, 5000);
-
-        } else if(window.matchMedia("(min-width: 600px) and (max-width: 799px)").matches){
-        
-            function sponsor(){
-
-                var fullWidth = $("#slide").width();
-                var slideWidth = fullWidth / 6
-
-                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
-                    $(".slideImg:first").appendTo("#slide");
-                    $("#slide").stop().css({marginLeft: 0});
-                });
-            }
-        
-            setInterval(sponsor, 5000);
-
-        } else if(window.matchMedia("(min-width: 800px) and (max-width: 1199px)").matches){
-        
-            function sponsor(){
-
-                var fullWidth = $("#slide").width();
-                var slideWidth = fullWidth / 6
-
-                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
-                    $(".slideImg:first").appendTo("#slide");
-                    $("#slide").stop().css({marginLeft: 0});
-                });
-            }
-        
-            setInterval(sponsor, 5000);
-
-        } else{
-        
-            function sponsor(){
-
-                var fullWidth = $("#slide").width();
-                var slideWidth = fullWidth / 6
-
-                $("#slide").stop().animate({marginLeft: -slideWidth}, function(){
-                    $(".slideImg:first").appendTo("#slide");
-                    $("#slide").stop().css({marginLeft: 0});
-                });
-            }
-        
-            setInterval(sponsor, 5000);
-
-        }
-    }
-
-    window.addEventListener("resize", slideResize, false);
-
-    slideResize();
-
-
-
-    // 스폰서 hover effect
-    $(".nocolor").mouseover(function(){
-        $(this).hide();
-        $(this).prev(".color").show();
-    });
-
-    $(".color").mouseout(function(){
-        $(this).hide();
-        $(this).next(".nocolor").show();
     });
 
 

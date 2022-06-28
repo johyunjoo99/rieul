@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 원스토어 모바일고딕 제목체 */
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 원스토어 모바일고딕 본문체 */
+
+@font-face {
+    font-family: '행복고흥B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/행복고흥B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 행복고흥B */
+
+#wrap{width: 100%; height: auto;}
+
+
+
+/* slider */
+#slider{width: 100%; height: 680px;
+        background: url(../img/index_img/paper_texture.JPG) repeat;}
+#slider_box{width: 1200px; height: 680px;
+            margin: 0 auto; position: relative;
+            border: 1px solid green;}
+
+#slider_text{position: absolute; bottom: 15%; left: 0;
+             z-index: 1;}
+#slider_text p{font-family: '행복고흥B'; font-size: 85px;
+               line-height: 85px;}
+#slider_text span{font-size: 120px;}
+
+
+
+#video_box{width: 978px; height: 550px;
+            position: absolute; top: 50%; right: 0;
+            transform: translateY(-50%);}
+#video_box img[alt="유튜브 썸네일"]{width: 100%; height: 100%;}
+#video_box img[alt="플레이 버튼"]{width: 80px; position: absolute;
+                                 top: 50%; left: 50%; z-index: 2;
+                                 transform: translate(-50%, -50%);
+                                 background: rgba(52, 52, 52, 0.5);
+                                 border-radius: 60px; cursor: pointer;}
+
+#video_box img[alt="플레이 버튼"]:hover{background-color: rgba(52, 52, 52, 0.8);
+                                       transition: all 0.5s ease;}
+
+
+
+/* sponsor */
+#sponsor{width: 100%; height: 900px;
+         background: url(../img/index_img/paper_texture.JPG) repeat;}
+#sponsor_box{width: 1200px; height: 900px;
+             margin: 0 auto;
+             border: 1px solid red;}
+
+#logos{width: 40%; height: 100%;
+       display: flex; flex-wrap: wrap;
+       justify-content: center; align-items: center;}
+.logoImg{width: 200px; height: 130px;
+         position: relative;}
+.logoImg img{width: 100%; position: absolute;}
+
+
+
+
+/* brand */
+#brand{width: 100%; height: 600px;
+       background: url(../img/index_img/paper_texture.JPG) repeat;}
+#brand_box{width: 1200px; height: 600px;
+           margin: 0 auto; position: relative;
+           border: 1px solid blue;}
+
+#brand_box > img{position: absolute; top: 50%; left: 0;
+                 transform: translateY(-50%);}
+
+#brand_intro{width: 600px; height: 400px;
+             background-color: #f6f3e2;
+             border: 15px solid #fff8ee;
+             box-shadow: inset 0px 0px 15px #b09f8c;
+             position: absolute; top: 50%; right: 0;
+             z-index: 2; transform: translateY(-50%);
+             display: flex; flex-direction: column;
+             justify-content: center; align-items: center;}
+
+#brand_intro img{width: 60px;}
+
+#brand_intro h2{font-family: 'ONE-Mobile-Regular';
+                text-align: center; margin-top: 4%;}
+#brand_intro p{font-family: 'ONE-Mobile-Regular';
+               line-height: 20px; margin-top: 2%;
+               text-align: center;}
