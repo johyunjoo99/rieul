@@ -27,11 +27,11 @@
 
 
 /* slider */
-#slider{width: 100%; height: 680px;
+#slider{width: 100%; height: 710px;
         background: url(../img/index_img/paper_texture.JPG) repeat;}
 #slider_box{width: 1200px; height: 680px;
             margin: 0 auto; position: relative;
-            border: 1px solid green;}
+            z-index: 2;}
 
 #slider_text{position: absolute; bottom: 15%; left: 0;
              z-index: 1;}
@@ -56,29 +56,13 @@
 
 
 
-/* sponsor */
-#sponsor{width: 100%; height: 900px;
-         background: url(../img/index_img/paper_texture.JPG) repeat;}
-#sponsor_box{width: 1200px; height: 900px;
-             margin: 0 auto;
-             border: 1px solid red;}
-
-#logos{width: 40%; height: 100%;
-       display: flex; flex-wrap: wrap;
-       justify-content: center; align-items: center;}
-.logoImg{width: 200px; height: 130px;
-         position: relative;}
-.logoImg img{width: 100%; position: absolute;}
-
-
-
 
 /* brand */
 #brand{width: 100%; height: 600px;
        background: url(../img/index_img/paper_texture.JPG) repeat;}
 #brand_box{width: 1200px; height: 600px;
            margin: 0 auto; position: relative;
-           border: 1px solid blue;}
+           z-index: 2;}
 
 #brand_box > img{position: absolute; top: 50%; left: 0;
                  transform: translateY(-50%);}
@@ -94,8 +78,100 @@
 
 #brand_intro img{width: 60px;}
 
-#brand_intro h2{font-family: 'ONE-Mobile-Regular';
+#brand_intro h1{font-family: 'ONE-Mobile-Title';
                 text-align: center; margin-top: 4%;}
 #brand_intro p{font-family: 'ONE-Mobile-Regular';
                line-height: 20px; margin-top: 2%;
                text-align: center;}
+
+
+
+
+
+/* sponsor */
+#sponsor{width: 100%; height: 600px;
+         background: url(../img/index_img/paper_texture.JPG) repeat;}
+#sponsor_box{width: 1200px; height: 600px;
+             margin: 0 auto; position: relative;
+             z-index: 2;}
+
+#logos{width: 53%; height: 75%;
+       position: absolute; top: 50%; left: 0;
+       z-index: 2; background-color: #f6f3e2;
+       border: 15px solid #fff8ee;
+       box-shadow: inset 0px 0px 15px #b09f8c;
+       transform: translateY(-50%);
+       display: flex; flex-wrap: wrap;
+       justify-content: center; align-items: center;}
+      
+#logos h1{width: 100%; text-align: center;
+          font-family: 'ONE-Mobile-Title'; font-size: 40px;
+          margin-top: 2%;}       
+
+.logoImg{width: 140px; height: 100px;
+         position: relative;}
+.logoImg img{width: 100%; position: absolute;}
+.color{display: none;}
+
+#logos p{width: 100%; text-align: center;
+         font-family: 'ONE-Mobile-Regular';
+         margin-bottom: 1%;}
+
+#sponsor_photo{width: 600px; height: 500px;
+               background-color: #333333;
+               position: absolute; top: 50%; right: 0;
+               transform: translateY(-50%);}
+#sponsor_photo img{position: relative;
+                   top: 50%; left: 50%;
+                   transform: translate(-50%, -50%);}
+
+#logos .logoImg .hide{display: none !important; }
+#logos .logoImg .show{display: block !important;}
+
+.logoImg:hover .noColor{display: none;}
+.logoImg:hover .color{display: block;}
+
+
+
+
+
+/* map */
+#map{width: 100%; height: 600px;
+     background: url("../img/index_img/paper_texture.JPG") repeat;
+     margin-bottom: 420px;}
+#map_box{width: 1200px; height: 500px;
+         margin: 0 auto; position: relative; z-index: 2;
+         display: flex; justify-content: space-between;
+         align-items: center;}
+
+#map_iframe{width: 500px; height: 360px;}
+#map_iframe iframe{width: 100%; height: 100%;}
+
+#map_text{width: 50%; height: 100%;
+          display: flex; flex-direction: column;
+          justify-content: center; align-items: center;}
+ 
+#map_text h3, 
+#map_text p{font-family: 'ONE-Mobile-Regular';}
+
+#map_text h1{font-family: 'ONE-Mobile-Title'; font-size: 40px;
+             margin-bottom: 3%;}
+#map_text h3{margin: 3% 0;}
+
+
+
+
+
+
+/* flower decoration */
+#flower1{width: 380px; opacity: 0.8;
+         position: absolute; top: 100px; left: 0;}
+#flower2{width: 500px; opacity: 0.8;
+         position:absolute; top: 500px; right: 0;}
+#flower3{width: 430px; opacity: 0.7;
+         position: absolute; top: 1150px; left: -1%;}
+#flower4{width: 420px; opacity: 0.7;
+         position: absolute; top: 1850px; right: 0;} 
+#flower5{width: 470px; opacity: 0.8;
+         position: absolute; top: 2200px; left: 0;
+         transform: rotate(-25deg);}

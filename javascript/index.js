@@ -24,11 +24,7 @@ $(function(){
     
 
 
-    // 팝업 슬라이드 hover effect
-    $(".rows").click(function(){
-
-    }); 
-
+    // 팝업 슬라이드 click effect 
     $(".rows").click(function(){
         $("#slide_img img").attr("src", "img/index_img/popup" + ($(this).index()+1) + ".jpg")
         $(".noClick").removeClass("active");

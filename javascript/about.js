@@ -7,4 +7,12 @@ $(function(){
         $("#menuIcon span:last").toggle("fast");
     });
 
+    //sponsor click effect
+    $(".logoImg").click(function(){
+        $("#sponsor_photo img").attr("src", "img/about_img/sponsor_img" + ($(this).index()) + ".png");
+        $(".noColor").removeClass("hide");
+        $(this).children(".noColor").addClass("hide");
+        $(".color").removeClass("show");
+        $(this).children(".color").addClass("show");        
+    });
 });
