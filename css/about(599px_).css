@@ -24,36 +24,37 @@
 
 
 
-@media (min-width: 1200px){
+@media (max-width: 599px){
 
-#wrap{width: 100%; height: auto;}
+#wrap{width: 100%; height: auto;
+      position: relative; margin-bottom: 52vw;}
 
 
 
 /* slider */
-#slider{width: 100%; height: 710px;
+#slider{width: 100%; height: 65vw;
         background: url(../img/index_img/paper_texture.JPG) repeat;}
-#slider_box{width: 1200px; height: 680px;
+#slider_box{width: 85%; height: 65vw;
             margin: 0 auto; position: relative;
             z-index: 2;}
 
 #slider_text{position: absolute; bottom: 15%; left: 0;
              z-index: 1;}
-#slider_text p{font-family: '행복고흥B'; font-size: 85px;
-               line-height: 85px;}
-#slider_text span{font-size: 120px;}
+#slider_text p{font-family: '행복고흥B'; font-size: 7.3vw;
+               line-height: 7.3vw;}
+#slider_text span{font-size: 10.3vw;}
 
 
 
-#video_box{width: 978px; height: 550px;
+#video_box{width: 75vw; height: 43vw;
             position: absolute; top: 50%; right: 0;
             transform: translateY(-50%);}
 #video_box img[alt="유튜브 썸네일"]{width: 100%; height: 100%;}
-#video_box img[alt="플레이 버튼"]{width: 80px; position: absolute;
+#video_box img[alt="플레이 버튼"]{width: 8vw; position: absolute;
                                  top: 50%; left: 50%; z-index: 2;
                                  transform: translate(-50%, -50%);
                                  background: rgba(52, 52, 52, 0.5);
-                                 border-radius: 60px; cursor: pointer;}
+                                 border-radius: 5.2vw; cursor: pointer;}
 
 #video_box img[alt="플레이 버튼"]:hover{background-color: rgba(52, 52, 52, 0.8);
                                        transition: all 0.5s ease;}
@@ -62,34 +63,36 @@
 
 
 /* brand */
-#brand{width: 100%; height: 600px;
+#brand{width: 100%; height: 80vw;
        background: url(../img/index_img/paper_texture.JPG) repeat;}
-#brand_box{width: 1200px; height: 600px;
+#brand_box{width: 85%; height: 80vw;
            margin: 0 auto; position: relative;
            z-index: 2;}
 
-#brand_box > img{position: absolute; top: 50%; left: 0;
+#brand_box > img{width: 90%;
+                 position: absolute; top: 30%; left: 0;
                  transform: translateY(-50%);}
 
-#brand_intro{width: 0%; height: 400px;
+#brand_intro{width: 0%; height: 50%;
              background-color: #f6f3e2;
-             border: 15px solid #fff8ee;
-             box-shadow: inset 0px 0px 15px #b09f8c;
-             position: absolute; top: 50%; left: 55%;
+             border: 1.25vw solid #fff8ee;
+             box-shadow: inset 0px 0px 1.25vw #b09f8c;
+             position: absolute; top: 60%; left: 20%;
              z-index: 2; transform: translateY(-50%);
              display: flex; flex-direction: column;
              justify-content: center; align-items: center;
              overflow: hidden; transition: all 0.5s ease;}
 
-#brand_intro img{width: 60px; opacity: 0; 
+#brand_intro img{width: 6vw; opacity: 0; 
                  transition: all 0.5s ease;}
 
 #brand_intro h1{font-family: 'ONE-Mobile-Title';
-                text-align: center; margin-top: 4%;
-                opacity: 0; transition: all 0.5s ease;}
+                text-align: center; font-size: 3vw;
+                margin-top: 4%; opacity: 0; 
+                transition: all 0.5s ease;}
 #brand_intro p{font-family: 'ONE-Mobile-Regular';
-               line-height: 20px; margin-top: 2%;
-               text-align: center;
+               line-height: 2vw; margin-top: 2%;
+               text-align: center; font-size: 0.1vw;
                opacity: 0; transition: all 0.5s ease;}
 
 
@@ -97,17 +100,17 @@
 
 
 /* sponsor */
-#sponsor{width: 100%; height: 600px;
+#sponsor{width: 100%; height: 80vw;
          background: url(../img/index_img/paper_texture.JPG) repeat;}
-#sponsor_box{width: 1200px; height: 600px;
+#sponsor_box{width: 85%; height: 80vw;
              margin: 0 auto; position: relative;
              z-index: 2;}
 
-#logos{width: 0%; height: 75%;
-       position: absolute; top: 50%; left: 0;
+#logos{width: 0%; height: 50%;
+       position: absolute; top: 80%; left: 0;
        z-index: 2; background-color: #f6f3e2;
-       border: 15px solid #fff8ee;
-       box-shadow: inset 0px 0px 15px #b09f8c;
+       border: 1.25vw solid #fff8ee;
+       box-shadow: inset 0px 0px 1.25vw #b09f8c;
        transform: translateY(-50%);
        display: flex; flex-wrap: wrap;
        justify-content: center; align-items: center;
@@ -115,39 +118,41 @@
       
 #logos h1{width: 100%; text-align: center;
           font-family: 'ONE-Mobile-Title'; 
-          font-size: 40px;
+          font-size: 3.5vw;
           margin-top: 2%; opacity: 0; 
           transition: all 0.5s ease;}       
 
-.logoImg{width: 140px; height: 100px;
+.logoImg{width: 15vw; height: 8vw;
          position: relative;
          opacity: 0; transition: all 0.5s ease;}
 .logoImg img{width: 100%; position: absolute;}
 .color{display: none;}
 
-#logos p{width: 100%; text-align: center;
+#logos p{font-size: 1.8vw;
+         width: 100%; text-align: center;
          font-family: 'ONE-Mobile-Regular';
          margin-bottom: 1%; opacity: 0; 
          transition: all 0.5s ease;}
 
-#sponsor_photo{width: 600px; height: 500px;
+#sponsor_photo{width: 90%; height: 75%;
                background-color: #333333;
-               position: absolute; top: 50%; right: 0;
+               position: absolute; top: 40%; right: 0;
                transform: translateY(-50%);
                overflow: hidden;}
 
-#explain{width: 600px; height: 500px; 
+#explain{width: 100%; height: 100%; 
          background-color: rgba(0, 0, 0, 0.6);
          position: absolute; top: 50%; right: 0;
          z-index: 3; transform: translateY(-50%);
          display: none;}
 #explain p{color: #fff; text-align: center;
            font-family: 'ONE-Mobile-Regular';
-           font-size: 40px; position: absolute;
+           font-size: 5vw; position: absolute;
            top: 50%; left: 50%;
            transform: translate(-50%, -50%);}
 
-#sponsor_photo img{position: relative;
+#sponsor_photo img{width: 100%;
+                   position: relative;
                    top: 50%; left: 50%;
                    transform: translate(-50%, -50%);}
 
@@ -162,27 +167,32 @@
 
 
 /* map */
-#map{width: 100%; height: 600px;
+#map{width: 100%; height: 140vw;
      background: url("../img/index_img/paper_texture.JPG") repeat;
-     margin-bottom: 420px;}
-#map_box{width: 1200px; height: 500px;
+     padding-top: 5%;}
+#map_box{width: 85%; height: 140vw;
          margin: 0 auto; position: relative; z-index: 2;
-         display: flex; justify-content: space-between;
+         display: flex; flex-direction: column;
+         justify-content: space-around;
          align-items: center;}
 
-#map_iframe{width: 500px; height: 360px;}
+#map_iframe{width: 90%; height: 35%;
+            padding-top: 10%;}
 #map_iframe iframe{width: 100%; height: 100%;}
 
-#map_text{width: 50%; height: 100%;
+#map_text{width: 100%; height: 50%;
           display: flex; flex-direction: column;
-          justify-content: center; align-items: center;}
+          justify-content: center; align-items: center;
+          padding-bottom: 10%;}
  
 #map_text h3, 
 #map_text p{font-family: 'ONE-Mobile-Regular';}
 
-#map_text h1{font-family: 'ONE-Mobile-Title'; font-size: 40px;
+#map_text h1{font-family: 'ONE-Mobile-Title'; font-size: 6vw;
              margin-bottom: 3%;}
-#map_text h3{margin: 3% 0;}
+#map_text h3{font-size: 3.5vw; margin: 3% 0;}
+
+#map_text p{font-size: 2.5vw;}
 
 
 
@@ -190,17 +200,16 @@
 
 
 /* flower decoration */
-#flower1{width: 380px; opacity: 0.8;
-         position: absolute; top: 100px; left: 0;}
-#flower2{width: 500px; opacity: 0.8;
-         position:absolute; top: 500px; right: 0;}
-#flower3{width: 430px; opacity: 0.7;
-         position: absolute; top: 1150px; left: -1%;}
-#flower4{width: 420px; opacity: 0.7;
-         position: absolute; top: 1850px; right: 0;} 
-#flower5{width: 470px; opacity: 0.8;
-         position: absolute; top: 2200px; left: 0;
-         transform: rotate(-25deg);}
+#flower1{width: 38vw; opacity: 0.8;
+         position: absolute; top: 3%; left: 0;}
+#flower2{width: 50vw; opacity: 0.8;
+         position: absolute; top: 13%; right: 0;}
+#flower3{width: 45vw; opacity: 0.7;
+         position: absolute; top: 30%; left: -1%;}
+#flower4{width: 45vw; opacity: 0.7;
+         position: absolute; top: 55%; right: 0;} 
+#flower5{width: 40vw; opacity: 0.8;
+         position: absolute; top: 92%; left: 0;}
 
 
 }

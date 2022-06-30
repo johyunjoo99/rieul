@@ -24,36 +24,37 @@
 
 
 
-@media (min-width: 1200px){
+@media (max-width: 799px) and (min-width: 600px){
 
-#wrap{width: 100%; height: auto;}
+#wrap{width: 100%; height: auto;
+      position: relative;}
 
 
 
 /* slider */
-#slider{width: 100%; height: 710px;
+#slider{width: 100%; height: 61vw;
         background: url(../img/index_img/paper_texture.JPG) repeat;}
-#slider_box{width: 1200px; height: 680px;
+#slider_box{width: 90%; height: 61vw;
             margin: 0 auto; position: relative;
             z-index: 2;}
 
 #slider_text{position: absolute; bottom: 15%; left: 0;
              z-index: 1;}
-#slider_text p{font-family: '행복고흥B'; font-size: 85px;
-               line-height: 85px;}
-#slider_text span{font-size: 120px;}
+#slider_text p{font-family: '행복고흥B'; font-size: 7.3vw;
+               line-height: 7.3vw;}
+#slider_text span{font-size: 10.3vw;}
 
 
 
-#video_box{width: 978px; height: 550px;
+#video_box{width: 75vw; height: 43vw;
             position: absolute; top: 50%; right: 0;
             transform: translateY(-50%);}
 #video_box img[alt="유튜브 썸네일"]{width: 100%; height: 100%;}
-#video_box img[alt="플레이 버튼"]{width: 80px; position: absolute;
+#video_box img[alt="플레이 버튼"]{width: 6.9vw; position: absolute;
                                  top: 50%; left: 50%; z-index: 2;
                                  transform: translate(-50%, -50%);
                                  background: rgba(52, 52, 52, 0.5);
-                                 border-radius: 60px; cursor: pointer;}
+                                 border-radius: 5.2vw; cursor: pointer;}
 
 #video_box img[alt="플레이 버튼"]:hover{background-color: rgba(52, 52, 52, 0.8);
                                        transition: all 0.5s ease;}
@@ -62,34 +63,36 @@
 
 
 /* brand */
-#brand{width: 100%; height: 600px;
+#brand{width: 100%; height: 80vw;
        background: url(../img/index_img/paper_texture.JPG) repeat;}
-#brand_box{width: 1200px; height: 600px;
+#brand_box{width: 90%; height: 80vw;
            margin: 0 auto; position: relative;
            z-index: 2;}
 
-#brand_box > img{position: absolute; top: 50%; left: 0;
+#brand_box > img{width: 65vw;
+                 position: absolute; top: 30%; left: 0;
                  transform: translateY(-50%);}
 
-#brand_intro{width: 0%; height: 400px;
+#brand_intro{width: 0%; height: 34.5vw;
              background-color: #f6f3e2;
-             border: 15px solid #fff8ee;
-             box-shadow: inset 0px 0px 15px #b09f8c;
-             position: absolute; top: 50%; left: 55%;
+             border: 1.25vw solid #fff8ee;
+             box-shadow: inset 0px 0px 1.25vw #b09f8c;
+             position: absolute; top: 60%; left: 40%;
              z-index: 2; transform: translateY(-50%);
              display: flex; flex-direction: column;
              justify-content: center; align-items: center;
              overflow: hidden; transition: all 0.5s ease;}
 
-#brand_intro img{width: 60px; opacity: 0; 
+#brand_intro img{width: 5.2vw; opacity: 0; 
                  transition: all 0.5s ease;}
 
 #brand_intro h1{font-family: 'ONE-Mobile-Title';
-                text-align: center; margin-top: 4%;
-                opacity: 0; transition: all 0.5s ease;}
+                text-align: center; font-size: 3vw;
+                margin-top: 4%; opacity: 0; 
+                transition: all 0.5s ease;}
 #brand_intro p{font-family: 'ONE-Mobile-Regular';
-               line-height: 20px; margin-top: 2%;
-               text-align: center;
+               line-height: 1.7vw; margin-top: 2%;
+               text-align: center; font-size: 1.4vw;
                opacity: 0; transition: all 0.5s ease;}
 
 
@@ -97,17 +100,17 @@
 
 
 /* sponsor */
-#sponsor{width: 100%; height: 600px;
+#sponsor{width: 100%; height: 60vw;
          background: url(../img/index_img/paper_texture.JPG) repeat;}
-#sponsor_box{width: 1200px; height: 600px;
+#sponsor_box{width: 95%; height: 60vw;
              margin: 0 auto; position: relative;
              z-index: 2;}
 
-#logos{width: 0%; height: 75%;
-       position: absolute; top: 50%; left: 0;
+#logos{width: 0%; height: 60%;
+       position: absolute; top: 60%; left: 0;
        z-index: 2; background-color: #f6f3e2;
-       border: 15px solid #fff8ee;
-       box-shadow: inset 0px 0px 15px #b09f8c;
+       border: 1.25vw solid #fff8ee;
+       box-shadow: inset 0px 0px 1.25vw #b09f8c;
        transform: translateY(-50%);
        display: flex; flex-wrap: wrap;
        justify-content: center; align-items: center;
@@ -115,11 +118,11 @@
       
 #logos h1{width: 100%; text-align: center;
           font-family: 'ONE-Mobile-Title'; 
-          font-size: 40px;
+          font-size: 3vw;
           margin-top: 2%; opacity: 0; 
           transition: all 0.5s ease;}       
 
-.logoImg{width: 140px; height: 100px;
+.logoImg{width: 13vw; height: 9.5vw;
          position: relative;
          opacity: 0; transition: all 0.5s ease;}
 .logoImg img{width: 100%; position: absolute;}
@@ -130,24 +133,25 @@
          margin-bottom: 1%; opacity: 0; 
          transition: all 0.5s ease;}
 
-#sponsor_photo{width: 600px; height: 500px;
+#sponsor_photo{width: 52vw; height: 43.1vw;
                background-color: #333333;
-               position: absolute; top: 50%; right: 0;
+               position: absolute; top: 30%; right: 0;
                transform: translateY(-50%);
                overflow: hidden;}
 
-#explain{width: 600px; height: 500px; 
+#explain{width: 52vw; height: 43.1vw; 
          background-color: rgba(0, 0, 0, 0.6);
          position: absolute; top: 50%; right: 0;
          z-index: 3; transform: translateY(-50%);
          display: none;}
 #explain p{color: #fff; text-align: center;
            font-family: 'ONE-Mobile-Regular';
-           font-size: 40px; position: absolute;
+           font-size: 3vw; position: absolute;
            top: 50%; left: 50%;
            transform: translate(-50%, -50%);}
 
-#sponsor_photo img{position: relative;
+#sponsor_photo img{width: 100%;
+                   position: relative;
                    top: 50%; left: 50%;
                    transform: translate(-50%, -50%);}
 
@@ -162,27 +166,29 @@
 
 
 /* map */
-#map{width: 100%; height: 600px;
+#map{width: 100%; height: 60vw;
      background: url("../img/index_img/paper_texture.JPG") repeat;
-     margin-bottom: 420px;}
-#map_box{width: 1200px; height: 500px;
+     margin-bottom: 35vw;}
+#map_box{width: 95%; height: 60vw;
          margin: 0 auto; position: relative; z-index: 2;
          display: flex; justify-content: space-between;
          align-items: center;}
 
-#map_iframe{width: 500px; height: 360px;}
+#map_iframe{width: 43.1vw; height: 31vw;}
 #map_iframe iframe{width: 100%; height: 100%;}
 
-#map_text{width: 50%; height: 100%;
+#map_text{width: 40%; height: 50%;
           display: flex; flex-direction: column;
           justify-content: center; align-items: center;}
  
 #map_text h3, 
 #map_text p{font-family: 'ONE-Mobile-Regular';}
 
-#map_text h1{font-family: 'ONE-Mobile-Title'; font-size: 40px;
+#map_text h1{font-family: 'ONE-Mobile-Title'; font-size: 3vw;
              margin-bottom: 3%;}
-#map_text h3{margin: 3% 0;}
+#map_text h3{font-size: 2vw; margin: 3% 0;}
+
+#map_text p{font-size: 1.6vw;}
 
 
 
@@ -190,16 +196,16 @@
 
 
 /* flower decoration */
-#flower1{width: 380px; opacity: 0.8;
-         position: absolute; top: 100px; left: 0;}
-#flower2{width: 500px; opacity: 0.8;
-         position:absolute; top: 500px; right: 0;}
-#flower3{width: 430px; opacity: 0.7;
-         position: absolute; top: 1150px; left: -1%;}
-#flower4{width: 420px; opacity: 0.7;
-         position: absolute; top: 1850px; right: 0;} 
-#flower5{width: 470px; opacity: 0.8;
-         position: absolute; top: 2200px; left: 0;
+#flower1{width: 35vw; opacity: 0.8;
+         position: absolute; top: 1.5%; left: 0;}
+#flower2{width: 50vw; opacity: 0.8;
+         position:absolute; top: 15%; right: 0;}
+#flower3{width: 43vw; opacity: 0.7;
+         position: absolute; top: 43%; left: -1%;}
+#flower4{width: 37vw; opacity: 0.7;
+         position: absolute; top: 70%; right: 0;} 
+#flower5{width: 30vw; opacity: 0.8;
+         position: absolute; top: 90%; left: 0;
          transform: rotate(-25deg);}
 
 
