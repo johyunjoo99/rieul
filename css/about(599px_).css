@@ -92,7 +92,7 @@
                 transition: all 0.5s ease;}
 #brand_intro p{font-family: 'ONE-Mobile-Regular';
                line-height: 2vw; margin-top: 2%;
-               text-align: center; font-size: 0.1vw;
+               text-align: center; font-size: 2vw;
                opacity: 0; transition: all 0.5s ease;}
 
 
@@ -128,7 +128,7 @@
 .logoImg img{width: 100%; position: absolute;}
 .color{display: none;}
 
-#logos p{font-size: 1.8vw;
+#logos p{font-size: 2.2vw;
          width: 100%; text-align: center;
          font-family: 'ONE-Mobile-Regular';
          margin-bottom: 1%; opacity: 0; 
