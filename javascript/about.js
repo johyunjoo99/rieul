@@ -7,6 +7,12 @@ $(function(){
         $("#menuIcon span:last").toggle("fast");
     });
 
+
+    $(window).scroll(function(){
+        $("#big_nav").hide();
+    });
+
+
     //sponsor click effect
     $(".logoImg").click(function(){
         $("#sponsor_photo img").attr("src", "img/about_img/sponsor_img" + ($(this).index()) + ".png");

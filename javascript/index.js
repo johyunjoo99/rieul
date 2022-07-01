@@ -7,6 +7,11 @@ $(function(){
         $("#menuIcon span:last").toggle("fast");
     });
 
+    $(window).scroll(function(){
+        $("#big_nav").hide();
+    });
+
+
 
     // 팝업 block
     $(".container").click(function(){
