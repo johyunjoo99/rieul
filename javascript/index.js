@@ -7,10 +7,29 @@ $(function(){
         $("#menuIcon span:last").toggle("fast");
     });
 
-    $(window).scroll(function(){
-        $("#big_nav").hide();
-    });
+    function scrollMenu(){
+        if(window.matchMedia("(min-width: 0px) and (max-width: 599px)").matches){
+            $(window).scroll(function(){
+                $("#big_nav").hide();   
+            });
+        } else if(window.matchMedia("(min-width: 600px) and (max-width: 799px)").matches){
+            $(window).scroll(function(){
+                $("#big_nav").show();   
+            });
+        } else if(window.matchMedia("(min-width: 800px) and (max-width: 1199px)").matches){
+            $(window).scroll(function(){
+                $("#big_nav").show();   
+            });
+        } else{
+            $(window).scroll(function(){
+                $("#big_nav").show();   
+            });
+        }
+    }
 
+    window.addEventListener("resize", scrollMenu, false);
+
+    scrollMenu();
 
 
     // 팝업 block
