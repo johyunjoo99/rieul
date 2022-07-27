@@ -84,7 +84,7 @@
                           transition: all 0.8s ease;}
 .button:hover .vertical{transform: scaleX(0);
                         border-left: none; border-right: none;
-                        transform: all 0.8s ease;}
+                        transition: all 0.8s ease;}
 
 
 #slider_img{width: 320px; height: 400px;}
